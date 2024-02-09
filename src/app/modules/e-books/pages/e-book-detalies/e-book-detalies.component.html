@@ -1,0 +1,31 @@
+<div class="max-w-screen-xl px-5 m-auto py-20 ">
+    <h1>
+        <a class="text-ebook-green" routerLink="/e-books">
+            < </a>
+                {{book?.attributes?.book?.title}}
+    </h1>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <aside class="col-span-1 bg-gray-700 px-3 py-5">
+            <cdk-accordion class="example-accordion">
+                <cdk-accordion-item #accordionItem="cdkAccordionItem" class="example-accordion-item" role="button"
+                    tabindex="0" [attr.id]="'accordion-header-1'" [attr.aria-expanded]="accordionItem.expanded"
+                    [attr.aria-controls]="'accordion-body-1'">
+                    <div class="example-accordion-item-header  text-xl mb-6" (click)="accordionItem.toggle()">
+                        Pages
+                    </div>
+                    <div class="example-accordion-item-body" role="region"
+                        [style.display]="accordionItem.expanded ? '' : 'none'" [attr.id]="'accordion-body-1'"
+                        [attr.aria-labelledby]="'accordion-header-1' ">
+                        <ul class="flex flex-col space-y-3 text-lg">
+                            <li>Page 1-2</li>
+                            <li>Page 2-3</li>
+                        </ul>
+                    </div>
+                </cdk-accordion-item>
+            </cdk-accordion>
+        </aside>
+        <div class="col-span-2">
+
+        </div>
+    </div>
+</div>
